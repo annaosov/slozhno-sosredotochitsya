@@ -2,4 +2,95 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: 'IBM Plex mono', 'Arial', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.header__cover-img {
+  height: 100vb;
+  width: 160vb;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  padding-inline: calc(((160vh - 100vw) / 2) + 10px);
+  display: grid;
+  padding-block: 10px;
+}
+
+.header__cover-img::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  justify-self: end;
+}
+
+.header__cover-img::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  justify-self: start;
+  margin-block-start: -10px;
+  align-self: end;
+  position: relative;
+}
+
+.header__decorated-element {
+  position: absolute;
+  color: var(--accent-color);
+  justify-self: end;
+  margin-inline-end: 9px;
+  aria-hidden: true;
+}
+
+.header__decorated-element::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px var(--accent-color);
+  margin-inline-start: 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  padding-inline: 13px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-self: center;
+}
+
+.header__text {
+  font-weight: 700;
+  background: var(--accent-color);
+  align-self: end;
 }
