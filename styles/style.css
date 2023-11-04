@@ -3,18 +3,13 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: 'IBM Plex mono', 'Arial', sans-serif;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
-  background-image: var(--bg-color);
+  font-size: var(--main-font-size);
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-.conteiner {
+.header {
   height: 100vb;
   width: 100vw;
   position: relative;
@@ -169,4 +164,54 @@
 .title-decor {
   background: var(--accent-color);
   color: var(--accent-text-color);
+}
+
+.content {
+  margin-block: 40px;
+  margin-inline: 10px;
+}
+
+@media (width >= 768px) {
+  .content {
+    margin-block: 60px;
+    margin-inline: 20px;
+  }
+}
+
+@media (width >= 768px) {
+  .why {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .why {
+    gap: 10px;
+  }
+}
+
+.title-section {
+  font-size: var(--main-font-size);
+  color: var(--header-color);
+  margin-block-end: 20px;
+}
+
+.item:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.title__item {
+  font-size: var(--main-font-size);
+  margin-block-end: 10px;
+}
+
+.text__item {
+  color: var(--text-color);
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
 }
