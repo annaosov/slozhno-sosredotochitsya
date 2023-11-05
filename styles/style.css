@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: 'IBM Plex mono', 'Arial', sans-serif;
   font-size: var(--main-font-size);
+  line-height: 130%;
   background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
@@ -197,7 +198,7 @@
 }
 
 @media (width >= 1024px) {
-  .why {
+  .why, .how {
     gap: 10px;
   }
 }
@@ -242,6 +243,74 @@
   }
 }
 
+.title__list {
+  font-size: var(--main-font-size);
+  margin-block-end: 20px;
+}
+
 .subtitle {
   font-weight: 400;
+}
+
+.title__img {
+  font-size: var(--main-font-size);
+  margin-block-end: 10px;
+}
+
+.img-conteiner {
+  display: grid;
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+  .title__img {
+    margin-block-end: 20px;
+  }
+
+  .img-conteiner {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .sunset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .ice-cream {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .tape {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .books {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .street {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
