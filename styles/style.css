@@ -2,26 +2,23 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: 'IBM Plex mono', 'Arial', sans-serif;
+  font-family: var(--font-family);
   font-size: var(--main-font-size);
   line-height: 130%;
   background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: var(--bg-image);
 }
 .header {
   height: 100vb;
-  width: 100vw;
   position: relative;
 }
 
 .header__cover-img {
   height: 100%;
   width: 100%;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
   padding-inline: 10px;
   display: grid;
   padding-block: 10px;
@@ -67,6 +64,7 @@
   color: var(--header-color);
   justify-self: end;
   margin-inline-end: 9px;
+  text-transform: uppercase;
 }
 
 .header__decorated-element::after {
@@ -220,7 +218,6 @@
 
 .title-section {
   font-size: var(--main-font-size);
-  line-height: 130%;
   color: var(--header-color);
   margin-block-end: 20px;
 }
@@ -231,7 +228,6 @@
 
 .title__item {
   font-size: var(--main-font-size);
-  line-height: 130%;
   margin-block-end: 10px;
 }
 
@@ -276,7 +272,6 @@
 
 .title__list {
   font-size: var(--main-font-size);
-  line-height: 130%;
   margin-block-end: 20px;
 }
 
@@ -286,7 +281,6 @@
 
 .title__img {
   font-size: var(--main-font-size);
-  line-height: 130%;
   margin-block-end: 10px;
 }
 
@@ -350,7 +344,6 @@
 
 .footer {
   height: 100vb;
-  width: 100vw;
   position: relative;
   display: grid;
   padding: 10px;
